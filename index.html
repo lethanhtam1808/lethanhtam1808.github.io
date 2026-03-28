@@ -469,7 +469,7 @@
     .profile-summary {
       display: grid;
       gap: 14px;
-      align-content: end;
+      align-content: start;
     }
 
     .summary-box {
@@ -479,6 +479,25 @@
       border: 1px solid rgba(56,189,248,0.14);
       color: var(--text);
       line-height: 1.8;
+    }
+
+    .profile-fill {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(148,163,184,0.1);
+      display: grid;
+      gap: 12px;
+    }
+
+    .profile-fill strong {
+      font-size: 1rem;
+    }
+
+    .profile-fill span {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.95rem;
     }
 
     body.light .contact-link {
@@ -554,7 +573,6 @@
     <section class="hero">
       <div class="container hero-grid">
         <article class="card hero-card">
-          <div class="eyebrow">⭐ CV Online cao cấp · Personal Brand Portfolio</div>
           <h1>
             Lê Thành Tâm<br />
             <span class="gradient">Project Manager</span>
@@ -625,6 +643,10 @@
             </div>
             <div class="summary-box">
               Tư duy của mình là: hiểu vấn đề thật rõ, sắp xếp nguồn lực hợp lý, giữ tiến độ minh bạch và luôn hướng mọi người về cùng một mục tiêu.
+            </div>
+            <div class="profile-fill">
+              <strong>Professional Focus</strong>
+              <span>Project delivery, stakeholder alignment, team coordination và phát triển những cách làm việc hiệu quả, rõ ràng, có thể tạo ra kết quả bền vững.</span>
             </div>
           </div>
         </aside>
