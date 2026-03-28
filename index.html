@@ -25,11 +25,11 @@
     body.light {
       --bg: #f4f8ff;
       --bg-soft: #eef4ff;
-      --card: rgba(255, 255, 255, 0.84);
-      --card-2: rgba(15, 23, 42, 0.04);
-      --line: rgba(15, 23, 42, 0.08);
+      --card: rgba(255, 255, 255, 0.95);
+      --card-2: rgba(15, 23, 42, 0.05);
+      --line: rgba(15, 23, 42, 0.10);
       --text: #0f172a;
-      --muted: #475569;
+      --muted: #334155;
       --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
     }
 
@@ -642,19 +642,65 @@
       font-size: 0.95rem;
     }
 
+    body.light .nav {
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    body.light .eyebrow,
+    body.light .slide-tag {
+      color: #075985;
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.18);
+    }
+
+    body.light .btn-secondary,
+    body.light .theme-toggle,
+    body.light .slider-btn,
+    body.light .mini-box,
+    body.light .stat,
+    body.light .highlight-item,
+    body.light .contact-item,
+    body.light .achievement-item,
+    body.light .experience-item,
+    body.light .timeline-item,
+    body.light .project-item,
+    body.light .profile-fill {
+      background: rgba(255,255,255,0.75);
+      color: #0f172a;
+      border-color: rgba(15,23,42,0.08);
+    }
+
+    body.light .slide-frame {
+      background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(139,92,246,0.08));
+      border-color: rgba(15,23,42,0.08);
+    }
+
+    body.light .slide-text,
+    body.light .section-copy,
+    body.light .stat span,
+    body.light .label,
+    body.light .nav-links,
+    body.light .timeline-item p,
+    body.light .project-item p,
+    body.light .profile-fill span {
+      color: #334155;
+    }
+
     body.light .contact-link {
       color: #0369a1;
     }
 
     body.light .summary-box,
     body.light .quote {
-      background: rgba(56,189,248,0.08);
+      background: rgba(56,189,248,0.10);
       color: #0f172a;
+      border-color: rgba(56,189,248,0.12);
     }
 
     body.light .badge {
       color: #7c5200;
-      background: linear-gradient(90deg, rgba(248,193,92,0.22), rgba(56,189,248,0.12));
+      background: linear-gradient(90deg, rgba(248,193,92,0.26), rgba(56,189,248,0.10));
     }
 
     footer {
