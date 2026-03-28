@@ -451,6 +451,133 @@
       line-height: 1.78;
     }
 
+    .portfolio-slider {
+      margin-top: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .slide-frame {
+      position: relative;
+      min-height: 340px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(139,92,246,0.12));
+      border: 1px solid rgba(148,163,184,0.12);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .slide-visual {
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.24), rgba(139,92,246,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .slide-visual span {
+      display: inline-grid;
+      gap: 10px;
+      color: #eff6ff;
+    }
+
+    .slide-content {
+      display: grid;
+      align-content: center;
+      gap: 14px;
+    }
+
+    .slide-tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      color: #dff4ff;
+      background: rgba(56,189,248,0.12);
+      border: 1px solid rgba(56,189,248,0.18);
+    }
+
+    .slide-title {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .slide-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .slider-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .slider-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card-2);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(148,163,184,0.35);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .slider-dot.active {
+      width: 28px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
     .quote {
       margin: 0;
       padding: 20px 22px;
@@ -527,7 +654,8 @@
       .grid-2,
       .hero-stats,
       .mini-grid,
-      .profile-top {
+      .profile-top,
+      .slide {
         grid-template-columns: 1fr;
       }
 
@@ -734,26 +862,69 @@
           <div class="section-head">
             <div class="kicker">Portfolio</div>
             <h2 class="section-title">Dấu ấn nghề nghiệp</h2>
+            <p class="section-copy">Một góc nhìn trực quan hơn về hành trình nghề nghiệp, điểm mạnh và định hướng chuyên nghiệp của mình.</p>
           </div>
-          <div class="project-list">
-            <div class="project-item">
-              <strong>Quản lý dự án & điều phối triển khai</strong>
-              <p>
-                Trực tiếp tham gia quản lý tiến độ, điều phối nguồn lực, kết nối stakeholder và giữ nhịp triển khai cho các hạng mục công việc quan trọng,
-                đảm bảo đầu việc được đi đúng hướng và đúng mục tiêu.
-              </p>
+
+          <div class="portfolio-slider">
+            <div class="slide-frame" id="portfolioSlider">
+              <div class="slide active">
+                <div class="slide-visual">
+                  <span>
+                    <div>PROJECT DELIVERY</div>
+                    <div>Timeline · Coordination · Execution</div>
+                  </span>
+                </div>
+                <div class="slide-content">
+                  <div class="slide-tag">01 · Project Management</div>
+                  <h3 class="slide-title">Quản lý dự án & điều phối triển khai</h3>
+                  <p class="slide-text">
+                    Mình trực tiếp tham gia quản lý tiến độ, điều phối nguồn lực, kết nối stakeholder và giữ nhịp triển khai cho các hạng mục công việc quan trọng,
+                    đảm bảo đầu việc được đi đúng hướng, đúng mục tiêu và vận hành mượt hơn giữa các bên liên quan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-visual">
+                  <span>
+                    <div>SOFTWARE BACKGROUND</div>
+                    <div>5 Years · Product · Technical Thinking</div>
+                  </span>
+                </div>
+                <div class="slide-content">
+                  <div class="slide-tag">02 · Technical Foundation</div>
+                  <h3 class="slide-title">Nền tảng kỹ thuật trong phát triển phần mềm</h3>
+                  <p class="slide-text">
+                    Với 5 năm kinh nghiệm trong phát triển phần mềm, mình có lợi thế hiểu sâu về sản phẩm, cách team kỹ thuật vận hành và những thách thức thực tế khi triển khai,
+                    từ đó giúp việc quản lý dự án sát thực tế hơn và dễ tạo đồng thuận hơn.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-visual">
+                  <span>
+                    <div>PERSONAL BRAND</div>
+                    <div>Young · Professional · Reliable</div>
+                  </span>
+                </div>
+                <div class="slide-content">
+                  <div class="slide-tag">03 · Personal Positioning</div>
+                  <h3 class="slide-title">Định hướng professional brand</h3>
+                  <p class="slide-text">
+                    Mình muốn xây dựng hình ảnh một Project Manager trẻ trung, chuyên nghiệp, có tư duy hệ thống, đủ gần kỹ thuật để hiểu team
+                    và đủ rõ chiến lược để hướng dự án tới kết quả rõ ràng, chỉn chu và đáng tin cậy.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="project-item">
-              <strong>Nền tảng kỹ thuật trong phát triển phần mềm</strong>
-              <p>
-                Có 5 năm kinh nghiệm trong phát triển phần mềm, đặc biệt mạnh về tư duy sản phẩm, phối hợp cùng kỹ thuật và hiểu rõ các thách thức triển khai thực tế.
-              </p>
-            </div>
-            <div class="project-item">
-              <strong>Định hướng professional brand</strong>
-              <p>
-                Xây dựng hình ảnh một PM trẻ trung, chuyên nghiệp, có tư duy hệ thống, đủ gần kỹ thuật để hiểu team và đủ rõ chiến lược để hướng dự án tới kết quả.
-              </p>
+
+            <div class="slider-controls">
+              <div class="slider-buttons">
+                <button class="slider-btn" id="prevSlide" type="button">←</button>
+                <button class="slider-btn" id="nextSlide" type="button">→</button>
+              </div>
+              <div class="slider-dots" id="sliderDots"></div>
             </div>
           </div>
         </article>
@@ -810,6 +981,45 @@
       document.body.classList.toggle('light');
       localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
     });
+
+    const slides = Array.from(document.querySelectorAll('#portfolioSlider .slide'));
+    const dotsWrap = document.getElementById('sliderDots');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    let currentSlide = 0;
+    let slideTimer;
+
+    function renderDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (index === currentSlide ? ' active' : '');
+        dot.type = 'button';
+        dot.addEventListener('click', () => showSlide(index));
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === currentSlide));
+      renderDots();
+      restartSlider();
+    }
+
+    function restartSlider() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => showSlide(currentSlide + 1), 5000);
+    }
+
+    prevBtn?.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn?.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    if (slides.length) {
+      renderDots();
+      restartSlider();
+    }
   </script>
 </body>
 </html>
