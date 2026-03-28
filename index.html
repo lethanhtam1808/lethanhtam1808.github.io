@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lê Thành Tâm | Project Manager at Viettel Software</title>
+  <meta name="description" content="CV online cao cấp của Lê Thành Tâm - Project Manager tại Viettel Software, 3 năm quản lý dự án và 5 năm trong phát triển phần mềm." />
+  <style>
+    :root {
+      --bg: #06111f;
+      --bg-soft: #0b1728;
+      --card: rgba(10, 18, 34, 0.78);
+      --card-2: rgba(255,255,255,0.04);
+      --line: rgba(148, 163, 184, 0.13);
+      --text: #edf4ff;
+      --muted: #9cb0cb;
+      --accent: #38bdf8;
+      --accent-2: #8b5cf6;
+      --accent-3: #22c55e;
+      --gold: #f8c15c;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.35);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(139,92,246,0.16), transparent 24%),
+        linear-gradient(180deg, #06111f 0%, #091423 48%, #06111f 100%);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 17, 31, 0.58);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 28px rgba(56,189,248,0.28);
+      font-size: 0.92rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 78px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 42px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -120px;
+      bottom: -120px;
+      background: radial-gradient(circle, rgba(56,189,248,0.2), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      color: #d8f2ff;
+      font-size: 0.86rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5.8vw, 4.8rem);
+      line-height: 1.01;
+      letter-spacing: -0.045em;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #7dd3fc, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      margin: 16px 0 0;
+      color: #dbeafe;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.9;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: transform .18s ease, opacity .18s ease, border-color .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); opacity: 0.96; }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: white;
+      box-shadow: 0 14px 34px rgba(56,189,248,0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(148, 163, 184, 0.06);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      color: var(--text);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(148,163,184,0.1);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .profile-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .profile-top {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 180px;
+      height: 220px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(135deg, rgba(56,189,248,0.16), rgba(139,92,246,0.14));
+    }
+
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar-fallback {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, rgba(56,189,248,0.28), rgba(139,92,246,0.28));
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+    }
+
+    .mini-box {
+      padding: 14px;
+      border-radius: 18px;
+      background: var(--card-2);
+      border: 1px solid rgba(148,163,184,0.1);
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 6px;
+    }
+
+    .value {
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    section { padding: 18px 0; }
+
+    .section-head { margin-bottom: 18px; }
+
+    .kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.72rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      line-height: 1.85;
+      margin: 10px 0 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 24px;
+    }
+
+    .about-card,
+    .skills-card,
+    .timeline-card,
+    .project-card,
+    .contact-card,
+    .achievement-card,
+    .experience-card,
+    .cert-card {
+      padding: 28px;
+    }
+
+    .highlight-list,
+    .contact-list,
+    .achievement-list,
+    .experience-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .highlight-item,
+    .contact-item,
+    .achievement-item,
+    .experience-item {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(148,163,184,0.05);
+      border: 1px solid rgba(148,163,184,0.1);
+      color: #dbe7fb;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(148,163,184,0.08);
+      border: 1px solid rgba(148,163,184,0.14);
+      color: #dce9ff;
+      font-size: 0.95rem;
+    }
+
+    .timeline-list,
+    .project-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .timeline-item,
+    .project-item {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(148,163,184,0.1);
+    }
+
+    .timeline-item strong,
+    .project-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+    }
+
+    .timeline-item p,
+    .project-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .quote {
+      margin: 0;
+      padding: 20px 22px;
+      border-radius: 20px;
+      border-left: 3px solid rgba(56,189,248,0.7);
+      background: rgba(56,189,248,0.08);
+      color: #e0f2fe;
+      line-height: 1.85;
+    }
+
+    .contact-link {
+      color: #dff4ff;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 42px 0 58px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-2,
+      .hero-stats,
+      .mini-grid,
+      .profile-top {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar-wrap {
+        width: 100%;
+        max-width: 260px;
+        height: 320px;
+      }
+
+      .hero { padding-top: 56px; }
+      .hero-card,
+      .profile-card,
+      .about-card,
+      .skills-card,
+      .timeline-card,
+      .project-card,
+      .contact-card,
+      .achievement-card,
+      .experience-card,
+      .cert-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">LT</span>
+        <span>LÊ THÀNH TÂM</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">Giới thiệu</a>
+        <a href="#experience">Kinh nghiệm</a>
+        <a href="#strengths">Kỹ năng</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <article class="card hero-card">
+          <div class="eyebrow">⭐ CV Online cao cấp · Personal Brand Portfolio</div>
+          <h1>
+            Lê Thành Tâm<br />
+            <span class="gradient">Project Manager</span>
+          </h1>
+          <p class="subtitle">
+            Project Manager tại <strong>Viettel Software</strong> · 3 năm quản lý dự án · 5 năm trong phát triển phần mềm
+          </p>
+          <p class="lead">
+            Mình là Lê Thành Tâm, hiện đang làm Project Manager tại Viettel Software. Mình có 5 năm kinh nghiệm trong lĩnh vực phát triển phần mềm
+            và 3 năm tập trung vào quản lý dự án, điều phối đội ngũ, kết nối stakeholder và đảm bảo các mục tiêu triển khai đi đúng hướng.
+            Mình theo đuổi phong cách làm việc trẻ trung, chuyên nghiệp, rõ ràng và định hướng kết quả.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Xem portfolio</a>
+            <a class="btn btn-secondary" href="https://facebook.com/sikaiichi" target="_blank" rel="noreferrer">Facebook</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>3 năm</strong>
+              <span>Quản lý dự án</span>
+            </div>
+            <div class="stat">
+              <strong>5 năm</strong>
+              <span>Phát triển phần mềm</span>
+            </div>
+            <div class="stat">
+              <strong>PMP</strong>
+              <span>Định vị chuyên nghiệp</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card profile-card">
+          <div class="profile-top">
+            <div class="avatar-wrap">
+              <img src="avatar.jpg" alt="Ảnh đại diện Lê Thành Tâm" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+              <div class="avatar-fallback" style="display:none;">LT</div>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-box">
+                <div class="label">Họ và tên</div>
+                <div class="value">Lê Thành Tâm</div>
+              </div>
+              <div class="mini-box">
+                <div class="label">Vị trí hiện tại</div>
+                <div class="value">Project Manager</div>
+              </div>
+              <div class="mini-box">
+                <div class="label">Công ty</div>
+                <div class="value">Viettel Software</div>
+              </div>
+              <div class="mini-box">
+                <div class="label">Phong cách</div>
+                <div class="value">Trẻ trung · Chuyên nghiệp</div>
+              </div>
+            </div>
+          </div>
+          <p class="section-copy" style="margin:0;">
+            Mình yêu thích việc tổ chức công việc rõ ràng, dẫn dắt tiến độ hiệu quả, tháo gỡ các điểm nghẽn trong dự án
+            và tạo ra môi trường phối hợp tốt giữa con người, quy trình và mục tiêu kinh doanh.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container grid-2">
+        <article class="card about-card">
+          <div class="section-head">
+            <div class="kicker">Giới thiệu</div>
+            <h2 class="section-title">Tóm tắt hồ sơ cá nhân</h2>
+          </div>
+          <p class="section-copy">
+            Với nền tảng 5 năm trong phát triển phần mềm và 3 năm kinh nghiệm quản lý dự án, mình có lợi thế hiểu sâu cả góc nhìn kỹ thuật lẫn vận hành dự án.
+            Điều đó giúp mình không chỉ lập kế hoạch và theo dõi tiến độ, mà còn hiểu bản chất vấn đề, hỗ trợ đội ngũ đúng lúc và đưa ra quyết định sát thực tế.
+          </p>
+          <p class="section-copy">
+            Mình ưu tiên hiệu quả thực thi, giao tiếp rõ ràng, tinh thần trách nhiệm cao và khả năng kết nối giữa khách hàng, team kỹ thuật và mục tiêu của tổ chức.
+            Trong dài hạn, mình muốn xây dựng hình ảnh một project manager đáng tin cậy, có tư duy hệ thống, khả năng lãnh đạo tốt và tạo ra giá trị bền vững.
+          </p>
+          <div class="highlight-list">
+            <div class="highlight-item">Có nền tảng kỹ thuật đủ mạnh để hiểu sâu sản phẩm và đội triển khai.</div>
+            <div class="highlight-item">Có tư duy quản lý, tổ chức và theo đuổi kết quả rõ ràng.</div>
+            <div class="highlight-item">Giữ được sự chuyên nghiệp nhưng vẫn trẻ trung, linh hoạt và gần gũi.</div>
+          </div>
+        </article>
+
+        <article id="experience" class="card experience-card">
+          <div class="section-head">
+            <div class="kicker">Kinh nghiệm</div>
+            <h2 class="section-title">Career Snapshot</h2>
+          </div>
+          <div class="experience-list">
+            <div class="experience-item"><strong>Hiện tại:</strong> Project Manager tại Viettel Software.</div>
+            <div class="experience-item"><strong>3 năm:</strong> Kinh nghiệm quản lý dự án, điều phối team, làm việc với stakeholder và theo dõi tiến độ triển khai.</div>
+            <div class="experience-item"><strong>5 năm:</strong> Làm trong lĩnh vực phát triển phần mềm với nền tảng mạnh về mobile và solution execution.</div>
+            <div class="experience-item"><strong>Định hướng:</strong> Tiếp tục phát triển theo hướng PM chuyên nghiệp, chuẩn hóa năng lực theo tư duy PMP.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="strengths">
+      <div class="container grid-2">
+        <article class="card skills-card">
+          <div class="section-head">
+            <div class="kicker">Kỹ năng chuyên môn</div>
+            <h2 class="section-title">Những giá trị mình mang lại</h2>
+          </div>
+          <div class="pill-list">
+            <span class="pill">Project Planning</span>
+            <span class="pill">Project Execution</span>
+            <span class="pill">Stakeholder Management</span>
+            <span class="pill">Team Coordination</span>
+            <span class="pill">Risk Awareness</span>
+            <span class="pill">Leadership</span>
+            <span class="pill">Mobile Product Understanding</span>
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Solution Thinking</span>
+            <span class="pill">Process Improvement</span>
+          </div>
+        </article>
+
+        <article class="card cert-card">
+          <div class="section-head">
+            <div class="kicker">Định vị chuyên nghiệp</div>
+            <h2 class="section-title">Điểm nhấn hồ sơ</h2>
+          </div>
+          <p class="quote">
+            “Mình tin rằng một project manager giỏi không chỉ quản lý timeline, mà còn giúp cả dự án vận hành mượt, đúng mục tiêu và tạo cảm giác tin cậy cho mọi người cùng tham gia.”
+          </p>
+          <div class="highlight-list">
+            <div class="highlight-item">Hiểu cả kỹ thuật và vận hành dự án nên có thể kết nối team hiệu quả hơn.</div>
+            <div class="highlight-item">Tư duy rõ, làm việc nhanh, bám sát kết quả và trách nhiệm.</div>
+            <div class="highlight-item">Định hướng xây dựng hình ảnh PM hiện đại, chuyên nghiệp và có chiều sâu.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container grid-2">
+        <article class="card project-card">
+          <div class="section-head">
+            <div class="kicker">Portfolio</div>
+            <h2 class="section-title">Dấu ấn nghề nghiệp</h2>
+          </div>
+          <div class="project-list">
+            <div class="project-item">
+              <strong>Quản lý dự án & điều phối triển khai</strong>
+              <p>
+                Trực tiếp tham gia quản lý tiến độ, điều phối nguồn lực, kết nối stakeholder và giữ nhịp triển khai cho các hạng mục công việc quan trọng,
+                đảm bảo đầu việc được đi đúng hướng và đúng mục tiêu.
+              </p>
+            </div>
+            <div class="project-item">
+              <strong>Nền tảng kỹ thuật trong phát triển phần mềm</strong>
+              <p>
+                Có 5 năm kinh nghiệm trong phát triển phần mềm, đặc biệt mạnh về tư duy sản phẩm, phối hợp cùng kỹ thuật và hiểu rõ các thách thức triển khai thực tế.
+              </p>
+            </div>
+            <div class="project-item">
+              <strong>Định hướng professional brand</strong>
+              <p>
+                Xây dựng hình ảnh một PM trẻ trung, chuyên nghiệp, có tư duy hệ thống, đủ gần kỹ thuật để hiểu team và đủ rõ chiến lược để hướng dự án tới kết quả.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card achievement-card">
+          <div class="section-head">
+            <div class="kicker">Thế mạnh cá nhân</div>
+            <h2 class="section-title">Điểm khác biệt của mình</h2>
+          </div>
+          <div class="achievement-list">
+            <div class="achievement-item">Nắm tốt cả góc nhìn kỹ thuật lẫn góc nhìn quản lý.</div>
+            <div class="achievement-item">Có khả năng dẫn dắt công việc theo hướng rõ ràng, thực tế và hiệu quả.</div>
+            <div class="achievement-item">Phong cách làm việc hiện đại, chủ động, trẻ trung nhưng vẫn chỉn chu.</div>
+            <div class="achievement-item">Dễ kết nối với team, khách hàng và các bên liên quan trong dự án.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <article class="card contact-card">
+          <div class="section-head">
+            <div class="kicker">Liên hệ</div>
+            <h2 class="section-title">Kết nối với mình</h2>
+            <p class="section-copy">
+              Nếu bạn muốn trao đổi về công việc, cơ hội hợp tác hoặc đơn giản là kết nối chuyên môn,
+              bạn có thể liên hệ với mình qua Facebook.
+            </p>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item">Họ tên: <strong>Lê Thành Tâm</strong></div>
+            <div class="contact-item">Vai trò hiện tại: <strong>Project Manager tại Viettel Software</strong></div>
+            <div class="contact-item">Facebook: <a class="contact-link" href="https://facebook.com/sikaiichi" target="_blank" rel="noreferrer">facebook.com/sikaiichi</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      CV online của Lê Thành Tâm · Project Manager tại Viettel Software · Phong cách trẻ trung, chuyên nghiệp.
+    </div>
+  </footer>
+</body>
+</html>
