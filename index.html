@@ -207,6 +207,26 @@
       margin-top: 28px;
     }
 
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border: 1px solid rgba(248, 193, 92, 0.28);
+      background: linear-gradient(90deg, rgba(248,193,92,0.16), rgba(56,189,248,0.12));
+      color: #fff3cf;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -471,6 +491,11 @@
       color: #0f172a;
     }
 
+    body.light .badge {
+      color: #7c5200;
+      background: linear-gradient(90deg, rgba(248,193,92,0.22), rgba(56,189,248,0.12));
+    }
+
     footer {
       padding: 42px 0 58px;
       color: var(--muted);
@@ -542,6 +567,10 @@
             và 3 năm tập trung vào quản lý dự án, điều phối đội ngũ, kết nối stakeholder và đảm bảo các mục tiêu triển khai đi đúng hướng.
             Mình theo đuổi phong cách làm việc trẻ trung, chuyên nghiệp, rõ ràng và định hướng kết quả.
           </p>
+          <div class="badge-row">
+            <span class="badge">🏅 PMP Certified Professional Mindset</span>
+          </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">Xem portfolio</a>
             <a class="btn btn-secondary" href="https://facebook.com/sikaiichi" target="_blank" rel="noreferrer">Facebook</a>
